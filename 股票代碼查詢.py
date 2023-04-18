@@ -10,15 +10,6 @@ Original file is located at
 import streamlit as st
 import pandas as pd
 
-
-def locate():
-    ip_address = get_client_ip()
-    if is_client_from_taiwan(ip_address):
-       return 'zh'
-    else:
-       return 'en'
-
-
 df=pd.read_csv("TWSE_TW-1.csv")
 df.fillna('', inplace=True)
 
